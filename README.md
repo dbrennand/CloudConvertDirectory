@@ -1,36 +1,25 @@
 # CloudConvertDirectory
-A script to convert all files in a given directory from a given file type to another filetype using the CloudConvert API.
+Convert all files in a directory to another file format using the [CloudConvert API](https://cloudconvert.com/api/v2#overview).
 
 ## Dependencies
 
-* Written in Python 3.7.
+* Python ^3.7.
 
 ```
-[[source]]
-name = "pypi"
-url = "https://pypi.org/simple"
-verify_ssl = true
+# pyproject.toml
+[tool.poetry.dependencies]
+python = "^3.7"
+cloudconvert = "2.0.0"
+fire = "0.4.0"
 
-[dev-packages]
-black = "*"
-
-[packages]
-cloudconvert = "*"
-fire = "*"
-
-[requires]
-python_version = "3.7"
-
-[pipenv]
-allow_prereleases = true
+[tool.poetry.dev-dependencies]
+black = "^21.11b1"
 ```
 
 ## Usage
-`python convert.py convertdir {from_extension} {to_extension} /path/to/directory --API_KEY=xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx`
+`python convert.py dir <FROm> <TO> /path/to/directory --API_KEY=<API Key>`
 
-Actual example:
-
-`python convert.py convertdir heic jpg /path/to/directory --API_KEY=xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx`
+E.g. `python convert.py dir heic jpg /path/to/directory --API_KEY=<API Key>`
 
 ## Authors -- Contributors
 

@@ -1,0 +1,18 @@
+[tool.poetry]
+name = "cloudconvertdirectory"
+version = "0.1.0"
+description = "Convert all files in a directory to another file format using the [CloudConvert API](https://cloudconvert.com/api/v2#overview)."
+authors = ["dbrennand <52419383+dbrennand@users.noreply.github.com>"]
+license = "MIT"
+
+[tool.poetry.dependencies]
+python = "^3.7"
+fire = "0.4.0"
+cloudconvert = {git = "https://github.com/cloudconvert/cloudconvert-python.git", rev = "v1"}
+
+[tool.poetry.dev-dependencies]
+black = "^21.11b1"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
