@@ -3,8 +3,6 @@ Convert all files in a directory to another file format using the [CloudConvert 
 
 ## Dependencies
 
-* Python ^3.7.
-
 ```
 # pyproject.toml
 [tool.poetry.dependencies]
