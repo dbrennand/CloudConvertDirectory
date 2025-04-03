@@ -95,6 +95,7 @@ for root, _, files in os.walk(args.directory):
                 url=converted_file["url"],
                 filename=os.path.join(convert_directory, converted_file["filename"]),
             )
+            print(f"Converted file URL '{converted_file['url']}'.")
             print(
                 f"Successfully converted file '{os.path.basename(_file)}' to '{os.path.join(convert_directory, converted_file['filename'])}'."
             )
