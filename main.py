@@ -42,7 +42,7 @@ api = cloudconvert.configure(api_key=args.api_key)
 
 for root, _, files in os.walk(args.directory):
     for _file in files:
-        if _file.endswith("heic"):
+        if _file.lower().endswith("heic"):
             print(
                 f"File '{os.path.basename(_file)}' contains matching file extension 'heic'."
             )
